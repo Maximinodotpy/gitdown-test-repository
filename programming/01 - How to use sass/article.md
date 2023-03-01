@@ -1,5 +1,5 @@
 ---
-name: 'How to use Sass'
+name: 'How to use Sasss'
 ---
 
 ## How to use Sass
