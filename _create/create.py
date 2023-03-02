@@ -53,7 +53,7 @@ def simple():
         description = i['description']
 
         try:
-            with open(f'../simple/{name}.md', 'w') as f:
+            with open(f'../simple/{name}.md', 'w', encoding='utf-8') as f:
                 f.write(f"""---
 name: { name }
 slug: { slug }
