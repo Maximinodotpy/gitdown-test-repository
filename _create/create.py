@@ -22,7 +22,14 @@ for f in files:
     os.remove(f)
 
 def remove_numbers_from_string(s):
-    return ''.join([i for i in s if not i.isdigit()])
+    s = ''.join([i for i in s if not i.isdigit()])
+    s = s.replace("'", '')
+    s = s.replace(".", '')
+    s = s.replace(",", '')
+    s = s.replace("-", '')
+    s = s.replace("?", '')
+    s = s.replace("!", '')
+    return s
 
 
 def simple():
