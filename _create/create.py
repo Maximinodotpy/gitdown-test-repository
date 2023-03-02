@@ -21,7 +21,7 @@ files = glob.glob('../simple/*')
 for f in files:
     os.remove(f)
 
-def remove_numbers_from_string(s):
+def clean_name(s):
     s = ''.join([i for i in s if not i.isdigit()])
     s = s.replace("'", '')
     s = s.replace(".", '')
@@ -29,6 +29,12 @@ def remove_numbers_from_string(s):
     s = s.replace("-", '')
     s = s.replace("?", '')
     s = s.replace("!", '')
+    s = s.replace("°", '')
+    s = s.replace("*", '')
+    s = s.replace("+", '')
+    s = s.replace("/", '')
+    s = s.replace(":", '')
+    s = s.replace(";", '')
     return s
 
 
@@ -52,7 +58,7 @@ def simple():
     gen.set_template(template)
     for i in gen.documents(NUM_DOCUMENTS):
 
-        name = remove_numbers_from_string(i['name'])
+        name = clean_name(i['name'])
         slug = slugify(name)
         content = i['content']
         category = i['category']
