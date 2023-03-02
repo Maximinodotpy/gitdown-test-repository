@@ -55,11 +55,11 @@ def simple():
         try:
             with open(f'../simple/{slug}.md', 'w', encoding='utf-8') as f:
                 f.write(f"""---
-name: { name }
-slug: { slug }
-status: { status }
-description: { description }
-category: { category }
+name: '{ name }'
+slug: '{ slug }'
+status: '{ status }'
+description: '{ description }'
+category: '{ category }'
 ---
 
 { content }
