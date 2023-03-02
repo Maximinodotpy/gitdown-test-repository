@@ -1,1 +1,0 @@
-This repository is made for testing the wordpress plugin gitdown.
